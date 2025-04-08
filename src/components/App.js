@@ -105,7 +105,7 @@ export default function App() {
   useEffect(function () {
     fetch("https://raw.githubusercontent.com/sultanfarrel/fake-api/main/questions.json")
       .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
+      .then((data) => dispatch({ type: "dataReceived", payload: data.questions }))
       .catch((err) => dispatch({ type: "dataFailed" }));
   }, []);
 

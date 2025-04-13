@@ -8,7 +8,7 @@ function Question() {
   return (
     <div>
       <h4>{question.question}</h4>
-      <Options />
+      <Options question={question} />
     </div>
   );
 }
